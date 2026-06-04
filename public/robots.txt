@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rumble-and-roast.vercel.app/sitemap.xml
