@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Rumble & Roast Cafe
+ORG:Rumble & Roast Cafe
+TEL;TYPE=WORK,VOICE:+916303071422
+TEL;TYPE=WORK,VOICE;VALUE=uri:tel:+916303071422
+EMAIL:hello@rumbleroastcafe.com
+URL:https://www.rumbleroastcafe.com
+END:VCARD

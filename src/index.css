@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coffee-dark: #1C120C;
+  --color-coffee-medium: #4A2C11;
+  --color-coffee-light: #8C593B;
+  --color-coffee-cream: #C8A27C;
+  
+  --color-gold-light: #F3E5AB;
+  --color-gold: #D4AF37;
+  --color-gold-dark: #AA7C11;
+  
+  --color-cream: #F9F6F0;
+  --color-cream-dark: #EADBC8;
+  
+  --color-matte-black: #121212;
+  --color-matte-gray: #1E1E1E;
+  --color-matte-light: #2E2E2E;
+
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+
+  --animate-spin-slow: spin 15s linear infinite;
+  --animate-bounce-slow: bounce 3s infinite;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+  }
+}
+
+@utility glassmorphism {
+  background: rgba(30, 30, 30, 0.5);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(212, 175, 55, 0.08);
+}
+
+@utility glassmorphism-light {
+  background: rgba(249, 246, 240, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(74, 44, 17, 0.08);
+}
+
+@utility neumorphism-inset {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.8),
+              inset -2px -2px 5px rgba(255, 255, 255, 0.05);
+}
+
+@utility neumorphism-out {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8),
+              -5px -5px 15px rgba(255, 255, 255, 0.02);
+}
+
+@utility bg-radial-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(74, 44, 17, 0.3) 0%, rgba(18, 18, 18, 0) 80%);
+}
+
+@utility bg-radial-gold {
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, rgba(18, 18, 18, 0) 70%);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #121212;
+  color: #F9F6F0;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(74, 44, 17, 0.8);
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  background-image: linear-gradient(to bottom, #4A2C11, #D4AF37);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #D4AF37;
+}
+
+/* Three.js Canvas Container */
+.canvas-container {
+  pointer-events: none;
+  z-index: 0;
+}
+
+.canvas-container canvas {
+  pointer-events: auto;
+}
